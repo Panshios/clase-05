@@ -27,7 +27,7 @@
     <div id="mapamundi" style="width: 100vw; height: 100vh;"></div>
 
     <script>
-        var url = "https://api.npoint.io/a35ff4af353fbc50fb89"; //le puse el del otro sitio, url más cómoda (also it works so)
+        var url = "https://raw.githubusercontent.com/Panshios/clase-05/gh-pages/datos.json"; //pucha queria usar mi link pero "anyone can edit it" me dio miedo
         
         var data;
 
@@ -66,7 +66,7 @@
                         semaforo = '#388e3c'; //verde para los demás casos
                     }                   
 
-                L.circle([latitud,longitud],{radius:100000,fillColor:semaforo,fillOpacity:0.9,color:'#666666',weight:1}).addTo(miMapa).bindPopup("<strong>" + data[x].pais + "</strong><br />" + data[x].casos  + " casos confirmados" + "<br />" + data[x].habitantes  + " millones de habitantes"); //todas los círculos tienen el mismo tamaño; que se vean distintos les muestra la "deformación" del mismo mapamundi
+                L.circle([latitud,longitud],{radius:100000,fillColor:semaforo,fillOpacity:0.9,color:semaforo,weight:1}).addTo(miMapa).bindPopup("<strong>" + data[x].pais + "</strong><br />" + data[x].casos  + " casos confirmados" + "<br />" + data[x].habitantes  + " millones de habitantes"); //todas los círculos tienen el mismo tamaño; que se vean distintos les muestra la "deformación" del mismo mapamundi
 
                 console.log((x+1) + ". " + data[x].pais + ": " + porcentaje + "%"); //puedes asomarte a la Consola de Javascript
 
