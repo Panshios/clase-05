@@ -23,7 +23,12 @@
             top: 2%;
             z-index: 99999;
         }
-        
+        middletext {
+        position: absolute;
+            right: 50%;
+            top: 50%;
+            z-index: 99999;
+        }
         canvas {
             display: block;
         }
@@ -37,12 +42,17 @@
         <option value="index.html" selected>Portada &rarr; index.html</option>
         <option value="graph.html">Gráfico &rarr; graph.html</option>
         <option value="mapa.html">Mundial &rarr; mapa.html</option>
+
     </select>
+
+    <middletext>
+    <h1 select>Japón</h1>
+    </middletext>
 
     <script>
         var url = "https://pomber.github.io/covid19/timeseries.json";
 
-        var casos, chile, confirmados, muertos, recuperados;
+        var casos, japón, confirmados, muertos, recuperados;
 
         function preload() {
             casos = loadJSON(url);
@@ -50,11 +60,11 @@
 
         function setup() {
             createCanvas(windowWidth, windowHeight).position(0, 0).style('z-index', -1);
-            chile = casos.Chile;
-            console.log(chile);
-            confirmados = chile[chile.length - 1].confirmed;
-            muertos = chile[chile.length - 1].deaths;
-            recuperados = chile[chile.length - 1].recovered;
+            japón = casos.Japan;
+            console.log(japón);
+            confirmados = japón[japón.length - 1].confirmed;
+            muertos = japón[japón.length - 1].deaths;
+            recuperados = japón[japón.length - 1].recovered;
             console.log(confirmados);
             console.log(muertos);
             console.log(recuperados);
