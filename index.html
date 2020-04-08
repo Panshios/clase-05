@@ -46,13 +46,13 @@
     </select>
 
     <middletext>
-    <h1 select>Japón</h1>
+    <h1>Bielorrusia</h1>
     </middletext>
 
     <script>
         var url = "https://pomber.github.io/covid19/timeseries.json";
 
-        var casos, japón, confirmados, muertos, recuperados;
+        var casos, beralus, confirmados, muertos, recuperados;
 
         function preload() {
             casos = loadJSON(url);
@@ -60,11 +60,11 @@
 
         function setup() {
             createCanvas(windowWidth, windowHeight).position(0, 0).style('z-index', -1);
-            japón = casos.Japan;
-            console.log(japón);
-            confirmados = japón[japón.length - 1].confirmed;
-            muertos = japón[japón.length - 1].deaths;
-            recuperados = japón[japón.length - 1].recovered;
+            beralus = casos.Belarus;
+            console.log(beralus);
+            confirmados = beralus[beralus.length - 1].confirmed;
+            muertos = beralus[beralus.length - 1].deaths;
+            recuperados = beralus[beralus.length - 1].recovered;
             console.log(confirmados);
             console.log(muertos);
             console.log(recuperados);
