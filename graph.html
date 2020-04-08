@@ -42,9 +42,9 @@
 
     <script>
         var url = "https://pomber.github.io/covid19/timeseries.json";
-        var casos, mexico, austria, iran, francia, suiza;
+        var casos, canada, austria, iran, francia, suiza;
         var marzo = [];
-        var marzo_mexico = [];
+        var marzo_canada = [];
         var marzo_austria = [];
         var marzo_iran = [];
         var marzo_francia = [];
@@ -61,15 +61,15 @@
                 marzo.push(x);
             }
 
-            mexico = casos.Mexico;
+            canada = casos.Canada;
             austria = casos.Austria;
             iran = casos.Iran;
             francia = casos.France;
             suiza = casos.Switzerland;
 
-            for (let x = 0; x < mexico.length; x++) {
-                if (mexico[x].date.includes("-3-")) {
-                    marzo_mexico.push(mexico[x].recovered);
+            for (let x = 0; x < canada.length; x++) {
+                if (canada[x].date.includes("-3-")) {
+                    marzo_canada.push(canada[x].recovered);
                 }
             }
 
@@ -126,13 +126,13 @@
                         lineTension: 0,
                         data: marzo_francia
                     }, {
-                        label: 'México',
+                        label: 'Canadá',
                         backgroundColor: 'rgba(102,194,165,.1)',
                         borderColor: 'rgb(102,194,165)',
                         borderWidth: 2,
                         pointRadius: 2,
                         lineTension: 0,
-                        data: marzo_mexico
+                        data: marzo_canada
                     }, {
                         label: 'Suiza',
                         backgroundColor: 'rgba(166,216,84,.1)',
